@@ -7,7 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
+import java.io.File;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Controller {
@@ -27,11 +30,40 @@ public class Controller {
     @FXML
     private ChoiceBox statsChoiceBox;
 
-    ObservableList<String> critterNameList = FXCollections.
-            observableArrayList("Algae", "Craig", "Critter1", "Critter2", "Critter3", "Critter4");
+
 
     @FXML
     private void initialize() {
+        File file = new File("src/assignment5");
+
+        ArrayList<String> fileNames = new ArrayList<String>(Arrays.asList(file.list()));
+        ArrayList<Class> classNames = new ArrayList<>();
+
+        for(String s: fileNames) {
+            try {
+                classNames.add(Class.forName(Critter.myPackage + "." + s.substring(0,s.indexOf('.'))));
+            } catch (ClassNotFoundException e) {
+                System.out.println(s + " is not a class");
+            }
+        }
+
+        classNames.removeIf(aClass -> !Critter.class.isAssignableFrom(aClass));
+
+        ArrayList<String> critterTypes = new ArrayList<>();
+
+        for(Class c: classNames) {
+            String critterName = c.toString();
+            critterName = critterName.substring(critterName.indexOf('.') + 1);
+            critterTypes.add(critterName);
+        }
+
+        ObservableList<String> critterNameList = FXCollections.observableArrayList();
+        critterNameList.addAll(critterTypes);
+
+        System.out.println(fileNames);
+        System.out.println(classNames);
+        System.out.println(critterTypes);
+
         makeChoiceBox.setItems(critterNameList);
         makeTextField.setText("1");
         stepTextField.setText("1");
@@ -54,6 +86,10 @@ public class Controller {
 
         if(isInteger(input)) {
             num = Integer.parseInt(input);
+            if(num < 0) {
+                System.out.println("No negative ints!");
+                return;
+            }
         } else {
             System.out.println("Not an int!!");
             return;

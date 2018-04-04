@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Reflections">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../reflections-master/reflections-master/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../reflections-master/reflections-master/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

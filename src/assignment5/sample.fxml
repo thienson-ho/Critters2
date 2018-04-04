@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="center" hgap="10" prefHeight="500.0" prefWidth="500.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
+<GridPane alignment="BOTTOM_LEFT" hgap="10" prefHeight="500.0" prefWidth="500.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints maxWidth="182.0" minWidth="114.0" prefWidth="122.0" />
@@ -24,10 +24,10 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Button fx:id="btn_make" mnemonicParsing="false" onAction="#makeButton" text="Make" />
-      <Button fx:id="btn_stats" mnemonicParsing="false" onAction="#statsButton" text="Stats" GridPane.rowIndex="1" />
-      <Button fx:id="btn_seed" mnemonicParsing="false" onAction="#seedButton" text="Seed" GridPane.rowIndex="2" />
-      <Button fx:id="btn_step" mnemonicParsing="false" onAction="#stepButton" text="Step" GridPane.rowIndex="3" />
+      <Button fx:id="btn_make" mnemonicParsing="false" onAction="#makeButton" prefHeight="31.0" prefWidth="68.0" text="Make" />
+      <Button fx:id="btn_stats" mnemonicParsing="false" onAction="#statsButton" prefHeight="31.0" prefWidth="68.0" text="Stats" GridPane.rowIndex="1" />
+      <Button fx:id="btn_seed" mnemonicParsing="false" onAction="#seedButton" prefHeight="31.0" prefWidth="68.0" text="Seed" GridPane.rowIndex="2" />
+      <Button fx:id="btn_step" mnemonicParsing="false" onAction="#stepButton" prefHeight="31.0" prefWidth="68.0" text="Step" GridPane.rowIndex="3" />
       <Button fx:id="btn_display" mnemonicParsing="false" onAction="#displayButton" text="Display" GridPane.rowIndex="4" />
       <ChoiceBox fx:id="statsChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <ChoiceBox fx:id="makeChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" />
