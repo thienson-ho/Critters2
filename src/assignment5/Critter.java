@@ -34,7 +34,7 @@ public abstract class Critter {
 	
 	public abstract CritterShape viewShape(); 
 	
-	private static String myPackage;
+	public static String myPackage;
 	private	static List<Critter> population = new java.util.ArrayList<Critter>();
 	private static List<Critter> babies = new java.util.ArrayList<Critter>();
 
@@ -384,7 +384,7 @@ public abstract class Critter {
 		}
 
 		//create new algae
-		genAlgae();
+//		genAlgae();
 
 		//add babies
 		population.addAll(babies);
@@ -407,6 +407,56 @@ public abstract class Critter {
 	   display component.
 	   // public static void displayWorld() {}
 	*/
+
+	/**
+	 * ASCII representation of the world
+	 */
+	public static void displayWorld() {
+
+		//create the top and bottom border and empty world row
+		String border = "+";
+		String row = "|";
+		for(int i = 0; i < Params.world_width; i++) {
+			border += "-";
+			row += " ";
+		}
+		border += "+";
+		row += "|";
+
+		//Add empty rows to world
+		ArrayList<String> world = new ArrayList<>();
+		for(int i = 0; i < Params.world_height; i++) {
+			world.add(row);
+		}
+
+		//Top border
+		System.out.println(border);
+
+		//Put the critters in the correct positions
+		for(Critter c: population) {
+			int x = c.x_coord;
+			int y = c.y_coord;
+
+			String currentRow = world.get(y);
+			String newRow = currentRow.substring(0, x + 1) + c.toString() + currentRow.substring(x + 2);
+			world.set(y,newRow);
+		}
+
+		//Print each row of the world
+		for(String s: world) {
+			System.out.println(s);
+		}
+
+		//Bottom border
+		System.out.println(border);
+
+//		System.out.println("Number of critters: " + population.size());
+//		Critter.runStats(population);
+//		for(Critter c: population) {
+//			System.out.println("X: " + c.x_coord);
+//			System.out.println("Y: " + c.y_coord);
+//		}
+	}
 
 	/**
 	 * create and initialize a Critter subclass.
