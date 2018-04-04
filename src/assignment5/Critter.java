@@ -1,8 +1,14 @@
 package assignment5;
 
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.layout.GridPane;
+
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Color;
 
 public abstract class Critter {
 	/* NEW FOR PROJECT 5 */
@@ -402,11 +408,53 @@ public abstract class Critter {
 		}
 	}
 
-	public static void displayWorld(Object pane) {} 
+	public static void displayWorld(GridPane pane) {
+		pane.getChildren().removeAll();
+		for(Critter c: population) {
+			Canvas canvas = drawCritter(c);
+			pane.add(canvas,c.x_coord,c.y_coord);
+		}
+
+//
+	}
 	/* Alternate displayWorld, where you use Main.<pane> to reach into your
 	   display component.
 	   // public static void displayWorld() {}
 	*/
+
+	private static Canvas drawCritter(Critter critter) {
+		Canvas canvas = new Canvas(Params.cellSize, Params.cellSize);
+		GraphicsContext gc = canvas.getGraphicsContext2D();
+		gc.setFill(critter.viewFillColor());
+
+		gc.setStroke(critter.viewOutlineColor());
+		gc.setLineWidth(Params.cellSize* 0.1);
+
+		double shapeLoc = Params.cellSize * 0.1;
+		double shapeSize = Params.cellSize * 0.8;
+
+
+		switch (critter.viewShape()) {
+			case CIRCLE: gc.fillOval(shapeLoc,shapeLoc,	shapeSize, shapeSize);
+				gc.strokeOval(shapeLoc,shapeLoc,shapeSize,shapeSize);
+				break;
+			case SQUARE: gc.fillRect(shapeLoc,shapeLoc, shapeSize, shapeSize);
+				gc.strokeRect(shapeLoc,shapeLoc,shapeSize,shapeSize);
+				break;
+			case STAR:
+				break;
+			case DIAMOND:
+				break;
+			case TRIANGLE:
+				break;
+		}
+
+
+
+
+
+		return canvas;
+	}
 
 	/**
 	 * ASCII representation of the world

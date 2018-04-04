@@ -4,8 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -16,7 +19,7 @@ import java.util.List;
 public class Controller {
 
     @FXML
-    private ChoiceBox makeChoiceBox;
+    private ChoiceBox critterTypeChoiceBox;
 
     @FXML
     private TextField makeTextField;
@@ -28,7 +31,8 @@ public class Controller {
     private TextField stepTextField;
 
     @FXML
-    private ChoiceBox statsChoiceBox;
+    private GridPane world;
+
 
 
 
@@ -43,7 +47,7 @@ public class Controller {
             try {
                 classNames.add(Class.forName(Critter.myPackage + "." + s.substring(0,s.indexOf('.'))));
             } catch (ClassNotFoundException e) {
-                System.out.println(s + " is not a class");
+//                System.out.println(s + " is not a class");
             }
         }
 
@@ -60,14 +64,37 @@ public class Controller {
         ObservableList<String> critterNameList = FXCollections.observableArrayList();
         critterNameList.addAll(critterTypes);
 
-        System.out.println(fileNames);
-        System.out.println(classNames);
-        System.out.println(critterTypes);
+//        System.out.println(fileNames);
+//        System.out.println(classNames);
+//        System.out.println(critterTypes);
 
-        makeChoiceBox.setItems(critterNameList);
+        critterTypeChoiceBox.setItems(critterNameList);
         makeTextField.setText("1");
         stepTextField.setText("1");
-        statsChoiceBox.setItems(critterNameList);
+
+
+        world.setGridLinesVisible(true);
+
+        world.setPrefSize(Params.prefDimension,Params.prefDimension);
+        world.setBackground(new Background(new BackgroundFill(Color.WHITE,
+                CornerRadii.EMPTY, Insets.EMPTY)));
+
+        while(world.getRowConstraints().size() > 0){
+            world.getRowConstraints().remove(0);
+        }
+
+        while(world.getColumnConstraints().size() > 0){
+            world.getColumnConstraints().remove(0);
+        }
+
+        for (int i = 0; i < Params.world_width; i++) {
+            ColumnConstraints colConst = new ColumnConstraints(Params.prefDimension/Params.minParam);
+            world.getColumnConstraints().add(colConst);
+        }
+        for (int i = 0; i < Params.world_height; i++) {
+            RowConstraints rowConst = new RowConstraints(Params.prefDimension/Params.minParam);
+            world.getRowConstraints().add(rowConst);
+        }
     }
 
     private boolean isInteger(String string) {
@@ -97,7 +124,7 @@ public class Controller {
 
         try {
             for(int i = 0; i < num; i++){
-                Critter.makeCritter(makeChoiceBox.getValue().toString());
+                Critter.makeCritter(critterTypeChoiceBox.getValue().toString());
             }
         } catch (Exception e) {
             System.out.println("Invalid Critter");
@@ -106,7 +133,7 @@ public class Controller {
     }
 
     public void statsButton(ActionEvent event) throws InvalidCritterException {
-        String critterName = statsChoiceBox.getValue().toString();
+        String critterName = critterTypeChoiceBox.getValue().toString();
 
         List<Critter> critterList = Critter.getInstances(critterName);
 
@@ -159,6 +186,7 @@ public class Controller {
 
     public void displayButton(ActionEvent event) {
         Critter.displayWorld();
+        Critter.displayWorld(world);
     }
 
 

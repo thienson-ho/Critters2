@@ -18,37 +18,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 800, 800));
         primaryStage.show();
 
-        File file = new File("src/assignment5");
-
-        ArrayList<String> fileNames = new ArrayList<String>(Arrays.asList(file.list()));
-        ArrayList<Class> classNames = new ArrayList<>();
-
-        for(String s: fileNames) {
-            try {
-                classNames.add(Class.forName(Critter.myPackage + "." + s.substring(0,s.indexOf('.'))));
-            } catch (ClassNotFoundException e) {
-                System.out.println(s + " is not a class");
-            }
-        }
-
-        classNames.removeIf(aClass -> !Critter.class.isAssignableFrom(aClass));
-
-        ArrayList<String> critterTypes = new ArrayList<>();
-
-        for(Class c: classNames) {
-            String critterName = c.toString();
-            critterName = critterName.substring(critterName.indexOf('.') + 1);
-            critterTypes.add(critterName);
-        }
-
-
-
-        System.out.println(fileNames);
-        System.out.println(classNames);
-        System.out.println(critterTypes);
     }
 
 
