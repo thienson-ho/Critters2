@@ -16,7 +16,7 @@ import java.util.List;
 public class Controller {
 
     @FXML
-    private ChoiceBox makeChoiceBox;
+    private ChoiceBox critterNameChoiceBox;
 
     @FXML
     private TextField makeTextField;
@@ -27,8 +27,6 @@ public class Controller {
     @FXML
     private TextField stepTextField;
 
-    @FXML
-    private ChoiceBox statsChoiceBox;
 
 
 
@@ -64,10 +62,9 @@ public class Controller {
         System.out.println(classNames);
         System.out.println(critterTypes);
 
-        makeChoiceBox.setItems(critterNameList);
+        critterNameChoiceBox.setItems(critterNameList);
         makeTextField.setText("1");
         stepTextField.setText("1");
-        statsChoiceBox.setItems(critterNameList);
     }
 
     private boolean isInteger(String string) {
@@ -97,7 +94,7 @@ public class Controller {
 
         try {
             for(int i = 0; i < num; i++){
-                Critter.makeCritter(makeChoiceBox.getValue().toString());
+                Critter.makeCritter(critterNameChoiceBox.getValue().toString());
             }
         } catch (Exception e) {
             System.out.println("Invalid Critter");
@@ -106,7 +103,7 @@ public class Controller {
     }
 
     public void statsButton(ActionEvent event) throws InvalidCritterException {
-        String critterName = statsChoiceBox.getValue().toString();
+        String critterName = critterNameChoiceBox.getValue().toString();
 
         List<Critter> critterList = Critter.getInstances(critterName);
 
