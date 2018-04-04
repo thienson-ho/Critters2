@@ -17,8 +17,6 @@
 
 package assignment5;
 
-import javafx.scene.paint.Color;
-
 public class Critter1 extends Critter {
     private int babies;
 
@@ -112,15 +110,10 @@ public class Critter1 extends Critter {
 
     @Override
     public CritterShape viewShape() {
-        return CritterShape.CIRCLE;
+        return null;
     }
 
     @Override
-    public javafx.scene.paint.Color viewOutlineColor() {return Color.BLUE;}
-
-    public javafx.scene.paint.Color viewFillColor() {return Color.YELLOW;}
-
-        @Override
     public String toString() {
         return "1";
     }

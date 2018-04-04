@@ -1,14 +1,23 @@
 package assignment5;
 
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.GridPane;
-
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import javafx.scene.canvas.Canvas;
+
+import assignment5.Main.scaleCanvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import javafx.scene.canvas.Canvas;
+
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.ArcType;
+import javafx.stage.Stage;
+
 
 public abstract class Critter {
 	/* NEW FOR PROJECT 5 */
@@ -408,57 +417,124 @@ public abstract class Critter {
 		}
 	}
 
-	public static void displayWorld(GridPane pane) {
-		pane.getChildren().removeAll();
-		for(Critter c: population) {
-			Canvas canvas = drawCritter(c);
-			pane.add(canvas,c.x_coord,c.y_coord);
-		}
-
-//
-	}
+	public static void displayWorld(Object pane) { 
 	/* Alternate displayWorld, where you use Main.<pane> to reach into your
 	   display component.
 	   // public static void displayWorld() {}
 	*/
-
-	private static Canvas drawCritter(Critter critter) {
-		Canvas canvas = new Canvas(Params.cellSize, Params.cellSize);
-		GraphicsContext gc = canvas.getGraphicsContext2D();
-		gc.setFill(critter.viewFillColor());
-
-		gc.setStroke(critter.viewOutlineColor());
-		gc.setLineWidth(Params.cellSize* 0.1);
-
-		double shapeLoc = Params.cellSize * 0.1;
-		double shapeSize = Params.cellSize * 0.8;
-
-
-		switch (critter.viewShape()) {
-			case CIRCLE: gc.fillOval(shapeLoc,shapeLoc,	shapeSize, shapeSize);
-				gc.strokeOval(shapeLoc,shapeLoc,shapeSize,shapeSize);
-				break;
-			case SQUARE: gc.fillRect(shapeLoc,shapeLoc, shapeSize, shapeSize);
-				gc.strokeRect(shapeLoc,shapeLoc,shapeSize,shapeSize);
-				break;
-			case STAR:
-				break;
-			case DIAMOND:
-				break;
-			case TRIANGLE:
-				break;
+		int width = (int)((scaleCanvas)pane).width;
+		int height = (int)((scaleCanvas)pane).height;
+		
+		int totalWidth = width - (width%Params.world_width);
+		int totalHeight=height-(height%Params.world_height);
+		int cellWidth = totalWidth/Params.world_width;
+		int cellHeight=totalHeight/Params.world_height;
+		
+		int squareLen = cellWidth < cellHeight ? cellWidth : cellHeight;
+		squareLen = (squareLen-1)%2==1 ? squareLen-1 : squareLen-2;
+		squareLen = squareLen>=0 ? squareLen: 0;
+		
+		
+		GraphicsContext gc = Main.gc;
+		gc.clearRect(0, 0, totalWidth, totalHeight);
+		gc.setFill(Color.WHITE);
+		gc.fillRect(0, 0, totalWidth, totalHeight);
+		gc.setStroke(Color.WHITE);
+		
+		boolean[][] critGrid = new boolean[Params.world_width][Params.world_height];
+		for(int i = 0; i < Params.world_width; i++) {
+			for(int j = 0; j < Params.world_height; j++) {
+				critGrid[i][j] = false;
+			}
 		}
-
-
-
-
-
-		return canvas;
+		
+		/*
+		for(int i = 0; i < Params.world_width; i++) {
+			for(int j = 0; j < Params.world_height; j++) {
+				gc.setStroke(Color.BLACK);
+				gc.strokeRect(i*cellWidth, j*cellHeight, (i+1)*cellWidth, (j+1)*cellHeight);
+			}
+		}
+		*/
+		
+		for(Critter c: population) {
+			int x = c.x_coord;
+			int y = c.y_coord;
+			if(critGrid[x][y] == false) {
+				System.out.println("[x: " + x + " y: " + y + " ]  ");
+				critGrid[x][y] = true;
+				CritterShape cShape = c.viewShape();
+				Color cFill = c.viewColor();
+				Color cLine = cFill;
+				if(!(c.viewFillColor().equals(Color.WHITE)) || !(c.viewOutlineColor().equals(Color.WHITE))) {
+					cFill = c.viewFillColor();
+					cLine = c.viewOutlineColor();
+				}
+				System.out.println(squareLen + " " + cellWidth + " " + cellHeight + " " + totalWidth + " " + totalHeight);
+				switch(cShape) {
+					case CIRCLE:
+						gc.setFill(cFill); 
+						gc.fillOval(x*cellWidth, y*cellHeight, squareLen, squareLen);
+						gc.setStroke(cLine);
+						gc.strokeOval(x*cellWidth, y*cellHeight, squareLen, squareLen);
+						break;
+					case SQUARE:
+						gc.setFill(cFill); 
+						gc.fillRect(x*cellWidth, y*cellHeight, squareLen, squareLen);
+						gc.setStroke(cLine);
+						gc.strokeRect(x*cellWidth, y*cellHeight, squareLen, squareLen);
+						break;
+					case TRIANGLE:
+						gc.setFill(cFill); 
+						gc.fillPolygon(new double[]{x*cellWidth,(x*cellWidth+squareLen/2)+1, x*cellWidth+squareLen},
+								new double[]{y*cellHeight, y*cellHeight+squareLen, y*cellHeight}, 3);
+						gc.setStroke(cLine);
+						gc.strokePolygon(new double[]{x*cellWidth,(x*cellWidth+squareLen/2)+1, x*cellWidth+squareLen},
+								new double[]{y*cellHeight, y*cellHeight+squareLen, y*cellHeight}, 3);
+						break;
+					case DIAMOND:
+						gc.setFill(cFill); 
+						gc.fillPolygon(new double[]{x*cellWidth,(x*cellWidth+squareLen/2)+1, x*cellWidth+squareLen,(x*cellWidth+squareLen/2)+1},
+								new double[]{(y*cellHeight+squareLen/2)+1, y*cellHeight, (y*cellHeight+squareLen/2)+1,y*cellHeight+squareLen},
+								4);
+						gc.setStroke(cLine);
+						gc.strokePolygon(new double[]{x*cellWidth,(x*cellWidth+squareLen/2)+1, x*cellWidth+squareLen,(x*cellWidth+squareLen/2)+1},
+								new double[]{(y*cellHeight+squareLen/2)+1, y*cellHeight, (y*cellHeight+squareLen/2)+1,y*cellHeight+squareLen},
+								4);
+						break;
+					case STAR:
+						int third = squareLen/4;
+						gc.setFill(cFill); 
+						gc.fillPolygon(new double[]{x*cellWidth,(x*cellWidth+squareLen/2)+1, x*cellWidth+squareLen},
+								new double[]{y*cellHeight+third, y*cellHeight+squareLen, y*cellHeight+third}, 3);
+						
+						gc.fillPolygon(new double[]{x*cellWidth,(x*cellWidth+squareLen/2)+1, x*cellWidth+squareLen},
+								new double[]{ y*cellHeight+(3*third),y*cellHeight, y*cellHeight+(3*third)}, 3);
+						gc.setStroke(cLine);
+						gc.strokePolygon(new double[]{x*cellWidth,(x*cellWidth+squareLen/2)+1, x*cellWidth+squareLen},
+								new double[]{y*cellHeight+third, y*cellHeight+squareLen, y*cellHeight+third}, 3);
+						gc.strokePolygon(new double[]{x*cellWidth,(x*cellWidth+squareLen/2)+1, x*cellWidth+squareLen},
+								new double[]{ y*cellHeight+(3*third),y*cellHeight, y*cellHeight+(3*third)}, 3);
+								
+						break;
+				}
+			}
+		}
+		
+		/*
+		GraphicsContext gc = Main.gc;
+		gc.clearRect(0, 0, width, height);
+		gc.setStroke(Color.RED);
+		gc.strokeLine(0, 0, width, height);
+		gc.strokeLine(0, height, width, 0);
+		*/
+	
 	}
 
 	/**
 	 * ASCII representation of the world
 	 */
+	/*
 	public static void displayWorld() {
 
 		//create the top and bottom border and empty world row
@@ -505,6 +581,7 @@ public abstract class Critter {
 //			System.out.println("Y: " + c.y_coord);
 //		}
 	}
+	*/
 
 	/**
 	 * create and initialize a Critter subclass.
