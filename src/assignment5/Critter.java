@@ -636,7 +636,14 @@ public abstract class Critter {
 		return result;
 	}
 	
-	public static String runStats(List<Critter> critters) {return null;}
+	public static String runStats(List<Critter> critters) {
+		if(critters.size() == 0) {
+			return "No critters of this type";
+		}
+		String name = critters.get(0).getClass().getName();
+		name = name.substring((name.indexOf(".")+1)) + "s";
+		return "There are " + critters.size() + " " + name;
+	}
 	
 	/* the TestCritter class allows some critters to "cheat". If you want to 
 	 * create tests of your Critter model, you can create subclasses of this class

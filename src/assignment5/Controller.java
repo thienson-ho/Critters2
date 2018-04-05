@@ -169,7 +169,7 @@ public class Controller {
     }
 
     public void outputStats() throws InvalidCritterException {
-        if(statsList == null) {
+        if(statsList == null || statsList.isEmpty()) {
             return;
         }
 
@@ -287,7 +287,7 @@ public class Controller {
         box.getChildren().add(label);
         box.getChildren().add(treeView);
         box.getChildren().add(btnLogin);
-        Scene scene = new Scene(box, 250, 150);
+        Scene scene = new Scene(box, 250, 400);
         stage.setScene(scene);
         stage.show();
     }
