@@ -1,7 +1,9 @@
 package assignment5;
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -51,7 +53,7 @@ public class Main extends Application {
 		    public boolean isResizable() {
 		    	height = scene.getHeight() - 240;
 		    	width = scene.getWidth();
-		    	System.out.println("Height: " + height + " Width: " + width);
+//		    	System.out.println("Height: " + height + " Width: " + width);
 		    	return true;
 		    }
 		 
@@ -75,52 +77,19 @@ public class Main extends Application {
         Parent parental = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Critter World");
 
-        
         canvas = new scaleCanvas();
         StackPane scaleable = new StackPane(); 
         scaleable.getChildren().add(canvas);
         canvas.widthProperty().bind(scaleable.widthProperty());
         canvas.heightProperty().bind(scaleable.heightProperty());
 
-
         ObservableList list = root.getChildren();
         list.addAll(scaleable, parental);
         
-        scene = new Scene(root, 600, 600);
+        scene = new Scene(root, 700, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
 
-//        File file = new File("src/assignment5");
-//
-//        ArrayList<String> fileNames = new ArrayList<String>(Arrays.asList(file.list()));
-//        ArrayList<Class> classNames = new ArrayList<>();
-//
-//        fileNames.removeIf(s -> s.equals("Critter.java"));
-//
-//        for(String s: fileNames) {
-//            try {
-//                classNames.add(Class.forName(Critter.myPackage + "." + s.substring(0,s.indexOf('.'))));
-//            } catch (ClassNotFoundException e) {
-//                //System.out.println(s + " is not a class");
-//            }
-//        }
-//
-//        classNames.removeIf(aClass -> !Critter.class.isAssignableFrom(aClass));
-//
-//        ArrayList<String> critterTypes = new ArrayList<>();
-//
-//        for(Class c: classNames) {
-//            String critterName = c.toString();
-//            critterName = critterName.substring(critterName.indexOf('.') + 1);
-//            critterTypes.add(critterName);
-//        }
-
-
-        /*
-        System.out.println(fileNames);
-        System.out.println(classNames);
-        System.out.println(critterTypes);
-        */
     }
 
 

@@ -249,7 +249,7 @@ public abstract class Critter {
 	 * @param direction 0 to 7 to specify the location of the child after birth
 	 */
 	protected final void reproduce(Critter offspring, int direction) {
-		System.out.println("Reproducing");
+//		System.out.println("Reproducing");
 		if(this.energy < Params.min_reproduce_energy) {
 			return;
 		}
@@ -469,7 +469,7 @@ public abstract class Critter {
 			int x = c.x_coord;
 			int y = c.y_coord;
 			if(critGrid[x][y] == false) {
-				System.out.println("[x: " + x + " y: " + y + " ]  ");
+//				System.out.println("[x: " + x + " y: " + y + " ]  ");
 				critGrid[x][y] = true;
 				CritterShape cShape = c.viewShape();
 				Color cFill = c.viewColor();
@@ -478,7 +478,7 @@ public abstract class Critter {
 					cFill = c.viewFillColor();
 					cLine = c.viewOutlineColor();
 				}
-				System.out.println(squareLen + " " + cellWidth + " " + cellHeight + " " + totalWidth + " " + totalHeight);
+//				System.out.println(squareLen + " " + cellWidth + " " + cellHeight + " " + totalWidth + " " + totalHeight);
 				switch(cShape) {
 					case CIRCLE:
 						gc.setFill(cFill); 

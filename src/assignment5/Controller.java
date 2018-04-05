@@ -1,11 +1,14 @@
 package assignment5;
 
+import javafx.animation.AnimationTimer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -27,11 +30,17 @@ public class Controller {
     @FXML
     private TextField stepTextField;
 
+    @FXML
+    private ToggleButton toggleButton;
 
+    @FXML
+    private TextArea messageBox;
 
+    private AnimationTimer a;
 
     @FXML
     private void initialize() {
+
         File file = new File("src/assignment5");
 
         ArrayList<String> fileNames = new ArrayList<String>(Arrays.asList(file.list()));
@@ -60,13 +69,46 @@ public class Controller {
         ObservableList<String> critterNameList = FXCollections.observableArrayList();
         critterNameList.addAll(critterTypes);
 
-        System.out.println(fileNames);
-        System.out.println(classNames);
-        System.out.println(critterTypes);
-
         critterNameChoiceBox.setItems(critterNameList);
         makeTextField.setText("1");
         stepTextField.setText("1");
+
+        a = new AnimationTimer() {
+
+            private long lastUpdate = 0 ;
+            @Override
+            public void handle(long now) {
+                if (now - lastUpdate >= 500_000_000) {
+                    animate();
+                    lastUpdate = now ;
+                }
+            }
+
+        };
+
+        toggleButton.setStyle("-fx-base: green;");
+
+        String s = "Welcome to Critter Simulation\n";
+        messageBox.appendText(s);
+    }
+
+    private void animate() {
+        int num;
+        String input = stepTextField.getText();
+
+        if(isInteger(input)) {
+            num = Integer.parseInt(input);
+        } else {
+//            System.out.println("Not an int!!");
+            messageBox.appendText("Please enter a positive integer\n");
+            return;
+        }
+
+        for(int i = 0; i < num; i++){
+            Critter.worldTimeStep();
+        }
+
+        Critter.displayWorld(Main.canvas);
     }
 
     private boolean isInteger(String string) {
@@ -79,18 +121,18 @@ public class Controller {
     }
 
     public void makeButton(ActionEvent event) {
-        System.out.println("Make Button");
+//        System.out.println("Make Button");
         int num;
         String input = makeTextField.getText();
 
         if(isInteger(input)) {
             num = Integer.parseInt(input);
             if(num < 0) {
-                System.out.println("No negative ints!");
+                messageBox.appendText("Please enter a positive integer\n");
                 return;
             }
         } else {
-            System.out.println("Not an int!!");
+            messageBox.appendText("Please enter a positive integer\n");
             return;
         }
 
@@ -98,9 +140,13 @@ public class Controller {
             for(int i = 0; i < num; i++){
                 Critter.makeCritter(critterNameChoiceBox.getValue().toString());
             }
+
+            Critter.displayWorld(Main.canvas);
         } catch (Exception e) {
-            System.out.println("Invalid Critter");
+            messageBox.appendText("Invalid Critter\n");
+//            System.out.println("Invalid Critter");
         }
+
 
     }
 
@@ -121,17 +167,17 @@ public class Controller {
 
     public void seedButton(ActionEvent event) {
         if(seedTextField.getText() == null) {
-            System.out.println("Invalid seed");
+            messageBox.appendText("Invalid seed\n");
             return;
         }
-        System.out.println("Seed Button");
+
         String input = seedTextField.getText();
         int num;
 
         if(isInteger(input)) {
             num = Integer.parseInt(input);
         } else {
-            System.out.println("Not an int!!");
+            messageBox.appendText("Invalid seed. Please enter an integer\n");
             return;
         }
 
@@ -139,30 +185,46 @@ public class Controller {
     }
 
     public void stepButton(ActionEvent event) {
-        System.out.println("Step Button");
-
         int num;
         String input = stepTextField.getText();
 
         if(isInteger(input)) {
             num = Integer.parseInt(input);
+            if(num < 0) {
+//                System.out.println("No negative ints!");
+                messageBox.appendText("Please enter a positive integer\n");
+                return;
+            }
         } else {
-            System.out.println("Not an int!!");
+            messageBox.appendText("Please enter a positive integer\n");
             return;
         }
 
         for(int i = 0; i < num; i++){
             Critter.worldTimeStep();
         }
+
+        Critter.displayWorld(Main.canvas);
     }
 
-    public void displayButton(ActionEvent event) {
-        Critter.displayWorld(Main.canvas);
+    public void playButton(ActionEvent event) {
+        if(toggleButton.isSelected()) {
+//            messageBox.appendText("Animating...\n");
+            a.start();
+        } else {
+//            messageBox.appendText("Animation stopped\n");
+            a.stop();
+        }
     }
 
     public void toggleGridButton(ActionEvent event) {
         Critter.gridFlag = !Critter.gridFlag;
         Critter.displayWorld(Main.canvas);
+
+    }
+
+    public void displayMessage(String message) {
+        messageBox.appendText(message + "\n");
     }
 
 
