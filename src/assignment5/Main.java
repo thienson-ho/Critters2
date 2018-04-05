@@ -2,12 +2,14 @@ package assignment5;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -72,42 +74,46 @@ public class Main extends Application {
     	
         Parent parental = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Critter World");
+
         
         canvas = new scaleCanvas();
         StackPane scaleable = new StackPane(); 
         scaleable.getChildren().add(canvas);
         canvas.widthProperty().bind(scaleable.widthProperty());
         canvas.heightProperty().bind(scaleable.heightProperty());
-        
+
+
         ObservableList list = root.getChildren();
         list.addAll(scaleable, parental);
         
-        scene = new Scene(root, 300, 275);
+        scene = new Scene(root, 600, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        File file = new File("src/assignment5");
-
-        ArrayList<String> fileNames = new ArrayList<String>(Arrays.asList(file.list()));
-        ArrayList<Class> classNames = new ArrayList<>();
-
-        for(String s: fileNames) {
-            try {
-                classNames.add(Class.forName(Critter.myPackage + "." + s.substring(0,s.indexOf('.'))));
-            } catch (ClassNotFoundException e) {
-                //System.out.println(s + " is not a class");
-            }
-        }
-
-        classNames.removeIf(aClass -> !Critter.class.isAssignableFrom(aClass));
-
-        ArrayList<String> critterTypes = new ArrayList<>();
-        
-        for(Class c: classNames) {
-            String critterName = c.toString();
-            critterName = critterName.substring(critterName.indexOf('.') + 1);
-            critterTypes.add(critterName);
-        }
+//        File file = new File("src/assignment5");
+//
+//        ArrayList<String> fileNames = new ArrayList<String>(Arrays.asList(file.list()));
+//        ArrayList<Class> classNames = new ArrayList<>();
+//
+//        fileNames.removeIf(s -> s.equals("Critter.java"));
+//
+//        for(String s: fileNames) {
+//            try {
+//                classNames.add(Class.forName(Critter.myPackage + "." + s.substring(0,s.indexOf('.'))));
+//            } catch (ClassNotFoundException e) {
+//                //System.out.println(s + " is not a class");
+//            }
+//        }
+//
+//        classNames.removeIf(aClass -> !Critter.class.isAssignableFrom(aClass));
+//
+//        ArrayList<String> critterTypes = new ArrayList<>();
+//
+//        for(Class c: classNames) {
+//            String critterName = c.toString();
+//            critterName = critterName.substring(critterName.indexOf('.') + 1);
+//            critterTypes.add(critterName);
+//        }
 
 
         /*

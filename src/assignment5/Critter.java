@@ -425,16 +425,14 @@ public abstract class Critter {
 		int width = (int)((scaleCanvas)pane).width;
 		int height = (int)((scaleCanvas)pane).height;
 
-		int oldwidth = width - (width%Params.world_width);;
-		int oldheight = height-(height%Params.world_height);
-
-		width = width<height ? width : height;
-		height = height<=width ? height : width;
-		
 		int totalWidth = width - (width%Params.world_width);
-		int totalHeight=height-(height%Params.world_height);
-		int cellWidth = totalWidth/Params.world_width;
-		int cellHeight=totalHeight/Params.world_height;
+		int totalHeight = height -(height%Params.world_height);
+
+		int cellDimension = (totalWidth/Params.world_width) < (totalHeight/Params.world_height) ?
+				(totalWidth/Params.world_width) : (totalHeight/Params.world_height);
+
+		int cellWidth = cellDimension;
+		int cellHeight = cellDimension;
 		
 		int squareLen = cellWidth < cellHeight ? cellWidth : cellHeight;
 		squareLen = (squareLen-1)%2==1 ? squareLen-1 : squareLen-2;
@@ -442,9 +440,9 @@ public abstract class Critter {
 		
 		
 		GraphicsContext gc = Main.gc;
-		gc.clearRect(0, 0, oldwidth, oldheight);
+		gc.clearRect(0, 0, width, height);
 		gc.setFill(Color.WHITE);
-		gc.fillRect(0, 0, oldwidth, oldheight);
+		gc.fillRect(0, 0, width, height);
 		gc.setStroke(Color.WHITE);
 		
 		boolean[][] critGrid = new boolean[Params.world_width][Params.world_height];
@@ -458,7 +456,7 @@ public abstract class Critter {
 		for(int i = 0; i < Params.world_width; i++) {
 			for(int j = 0; j < Params.world_height; j++) {
 				gc.setStroke(Color.BLACK);
-				gc.strokeRect(i*cellWidth, j*cellHeight, (i+1)*cellWidth, (j+1)*cellHeight);
+				gc.strokeRect(i*cellWidth, j*cellHeight, cellWidth-1, cellHeight-1);
 			}
 		}
 

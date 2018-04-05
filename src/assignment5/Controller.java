@@ -37,6 +37,8 @@ public class Controller {
         ArrayList<String> fileNames = new ArrayList<String>(Arrays.asList(file.list()));
         ArrayList<Class> classNames = new ArrayList<>();
 
+        fileNames.removeIf(s -> s.equals("Critter.java"));
+
         for(String s: fileNames) {
             try {
                 classNames.add(Class.forName(Critter.myPackage + "." + s.substring(0,s.indexOf('.'))));

@@ -9,12 +9,11 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="BOTTOM_LEFT" hgap="10" prefHeight="500.0" prefWidth="500.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
+<GridPane alignment="TOP_RIGHT" hgap="10" prefHeight="500.0" prefWidth="500.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints maxWidth="182.0" minWidth="114.0" prefWidth="122.0" />
-      <ColumnConstraints maxWidth="73.0" minWidth="5.0" prefWidth="65.0" />
-      <ColumnConstraints />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
       <ColumnConstraints />
       <ColumnConstraints />
    </columnConstraints>
@@ -36,9 +35,9 @@
       <TextField fx:id="seedTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <TextField fx:id="stepTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <TextField fx:id="makeTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Label prefHeight="21.0" prefWidth="82.0" text="Critter Type:" />
+      <Label prefHeight="21.0" prefWidth="89.0" text=" Critter Type:" />
    </children>
    <padding>
-      <Insets bottom="10.0" left="10.0" />
+      <Insets bottom="10.0" left="10.0" top="5.0" />
    </padding>
 </GridPane>
