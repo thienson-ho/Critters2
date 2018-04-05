@@ -160,5 +160,10 @@ public class Controller {
         Critter.displayWorld(Main.canvas);
     }
 
+    public void toggleGridButton(ActionEvent event) {
+        Critter.gridFlag = !Critter.gridFlag;
+        Critter.displayWorld(Main.canvas);
+    }
+
 
 }

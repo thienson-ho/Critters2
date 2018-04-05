@@ -21,6 +21,9 @@ import javafx.stage.Stage;
 
 public abstract class Critter {
 	/* NEW FOR PROJECT 5 */
+
+	public static boolean gridFlag = false;
+
 	public enum CritterShape {
 		CIRCLE,
 		SQUARE,
@@ -452,11 +455,12 @@ public abstract class Critter {
 			}
 		}
 		
-
-		for(int i = 0; i < Params.world_width; i++) {
-			for(int j = 0; j < Params.world_height; j++) {
-				gc.setStroke(Color.BLACK);
-				gc.strokeRect(i*cellWidth, j*cellHeight, cellWidth-1, cellHeight-1);
+		if(gridFlag) {
+			for (int i = 0; i < Params.world_width; i++) {
+				for (int j = 0; j < Params.world_height; j++) {
+					gc.setStroke(Color.BLACK);
+					gc.strokeRect(i * cellWidth, j * cellHeight, cellWidth - 1, cellHeight - 1);
+				}
 			}
 		}
 
