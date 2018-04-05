@@ -17,6 +17,8 @@
 
 package assignment5;
 
+import javafx.scene.paint.Color;
+
 public class Critter1 extends Critter {
     private int babies;
 
@@ -101,17 +103,23 @@ public class Critter1 extends Critter {
 
         }
 
-        System.out.print("" + critter1s.size() + " total Critter1's    ");
-        System.out.print("" + totalCircles + " total circles completed    ");
-        System.out.println("" + totalBabies + " total babies made");
+        String output = "" + critter1s.size() + " total Critter1's    "
+                + totalCircles + " total circles completed    "
+                + totalBabies + " total babies made";
 
-        return "";
+        return output;
     }
 
     @Override
     public CritterShape viewShape() {
-        return null;
+        return CritterShape.TRIANGLE;
     }
+
+    @Override
+    public javafx.scene.paint.Color viewOutlineColor() {return Color.BLUE;}
+
+    @Override
+    public javafx.scene.paint.Color viewFillColor() {return Color.YELLOW;}
 
     @Override
     public String toString() {

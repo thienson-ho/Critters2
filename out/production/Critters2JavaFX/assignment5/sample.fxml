@@ -11,8 +11,9 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<GridPane hgap="10" prefHeight="200.0" prefWidth="800.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
+<GridPane hgap="10" prefHeight="186.0" prefWidth="800.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
    <columnConstraints>
       <ColumnConstraints maxWidth="109.0" minWidth="71.0" prefWidth="99.0" />
       <ColumnConstraints maxWidth="182.0" minWidth="70.0" prefWidth="122.0" />
@@ -33,18 +34,24 @@
    <children>
       <Button fx:id="btn_make" mnemonicParsing="false" onAction="#makeButton" prefHeight="31.0" prefWidth="91.0" text="Make" GridPane.rowIndex="1" />
       <Button fx:id="btn_stats" mnemonicParsing="false" onAction="#statsButton" prefHeight="31.0" prefWidth="130.0" text="Stats" GridPane.columnIndex="2" />
-      <Button fx:id="btn_seed" mnemonicParsing="false" onAction="#seedButton" prefHeight="31.0" prefWidth="90.0" text="Seed -&gt;" GridPane.rowIndex="4" />
-      <Button fx:id="btn_step" mnemonicParsing="false" onAction="#stepButton" prefHeight="31.0" prefWidth="90.0" text="Step -&gt;" GridPane.rowIndex="3" />
+      <Button fx:id="btn_seed" mnemonicParsing="false" onAction="#seedButton" prefHeight="31.0" prefWidth="90.0" text="Seed -&gt;" GridPane.rowIndex="3" />
+      <Button fx:id="btn_step" mnemonicParsing="false" onAction="#stepButton" prefHeight="31.0" prefWidth="90.0" text="Step -&gt;" GridPane.rowIndex="2" />
       <ChoiceBox fx:id="critterNameChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" />
-      <TextField fx:id="seedTextField" promptText="seed number" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <TextField fx:id="stepTextField" promptText="speed number" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="seedTextField" promptText="seed number" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="stepTextField" prefHeight="31.0" prefWidth="132.0" promptText="speed number" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
       <TextField fx:id="makeTextField" promptText="Enter number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label prefHeight="21.0" prefWidth="89.0" text=" Critter Type:" />
-      <Button mnemonicParsing="false" onAction="#toggleGridButton" prefHeight="31.0" prefWidth="121.0" text="Toggle Grid" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      <ToggleButton fx:id="toggleButton" mnemonicParsing="false" onAction="#playButton" prefHeight="31.0" prefWidth="135.0" text="&lt;- Play" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <ScrollPane maxWidth="434.0" minWidth="10.0" prefHeight="164.0" prefWidth="434.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
+      <Button mnemonicParsing="false" onAction="#toggleGridButton" prefHeight="31.0" prefWidth="121.0" text="Toggle Grid" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <ToggleButton fx:id="toggleButton" mnemonicParsing="false" onAction="#playButton" prefHeight="31.0" prefWidth="135.0" text="&lt;- Play" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <ScrollPane maxWidth="434.0" minWidth="10.0" prefHeight="100.0" prefWidth="410.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
          <content>
-            <TextArea fx:id="messageBox" prefHeight="322.0" prefWidth="389.0" />
+            <TextArea fx:id="messageBox" prefHeight="322.0" prefWidth="389.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextArea>
          </content>
       </ScrollPane>
    </children>

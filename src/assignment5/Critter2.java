@@ -16,6 +16,8 @@
  */
 package assignment5;
 
+import javafx.scene.paint.Color;
+
 public class Critter2 extends Critter{
 
     private int walks;
@@ -95,19 +97,24 @@ public class Critter2 extends Critter{
             totalFights += c.fights;
         }
 
-        System.out.print("" + critter2s.size() + " total Critter2's    ");
-        System.out.print("Runs: " + totalRuns + "    ");
-        System.out.print("Walks: " + totalWalks + "    ");
-        System.out.println("Fights: " + totalFights);
+        String output = "" + critter2s.size() + " total Critter2's    "
+                + "Runs: " + totalRuns + "    "
+                +"Walks: " + totalWalks + "    "
+                + "Fights: " + totalFights;
 
-        return "";
+        return output;
     }
 
     @Override
     public CritterShape viewShape() {
-        return null;
+        return CritterShape.DIAMOND;
     }
 
+    @Override
+    public javafx.scene.paint.Color viewOutlineColor() {return Color.ORANGE;}
+
+    @Override
+    public javafx.scene.paint.Color viewFillColor() {return Color.BLUE;}
     @Override
     public String toString() {
         return "2";

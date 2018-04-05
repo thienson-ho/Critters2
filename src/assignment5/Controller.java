@@ -3,14 +3,23 @@ package assignment5;
 import javafx.animation.AnimationTimer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.ObservableSet;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.CheckBoxTreeCell;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,6 +46,10 @@ public class Controller {
     private TextArea messageBox;
 
     private AnimationTimer a;
+
+    private ObservableList<String> critterNameList;
+
+    private ObservableList<String> statsList;
 
     @FXML
     private void initialize() {
@@ -66,7 +79,7 @@ public class Controller {
             critterTypes.add(critterName);
         }
 
-        ObservableList<String> critterNameList = FXCollections.observableArrayList();
+        critterNameList = FXCollections.observableArrayList();
         critterNameList.addAll(critterTypes);
 
         critterNameChoiceBox.setItems(critterNameList);
@@ -79,7 +92,11 @@ public class Controller {
             @Override
             public void handle(long now) {
                 if (now - lastUpdate >= 500_000_000) {
-                    animate();
+                    try {
+                        animate();
+                    } catch (InvalidCritterException e) {
+                        e.printStackTrace();
+                    }
                     lastUpdate = now ;
                 }
             }
@@ -92,7 +109,7 @@ public class Controller {
         messageBox.appendText(s);
     }
 
-    private void animate() {
+    private void animate() throws InvalidCritterException {
         int num;
         String input = stepTextField.getText();
 
@@ -109,6 +126,7 @@ public class Controller {
         }
 
         Critter.displayWorld(Main.canvas);
+        outputStats();
     }
 
     private boolean isInteger(String string) {
@@ -150,19 +168,24 @@ public class Controller {
 
     }
 
-    public void statsButton(ActionEvent event) throws InvalidCritterException {
-        String critterName = critterNameChoiceBox.getValue().toString();
-
-        List<Critter> critterList = Critter.getInstances(critterName);
-
-        try {
-            Class critterType = Class.forName(Critter.myPackage + "." + critterName);
-            Method m = critterType.getMethod("runStats", java.util.List.class);
-            m.invoke(critterList.getClass(), critterList);
-        } catch (Exception e) {
-            System.out.println("No method");
+    public void outputStats() throws InvalidCritterException {
+        if(statsList == null) {
+            return;
         }
 
+        for(String critterName: statsList) {
+            List<Critter> critterList = Critter.getInstances(critterName);
+
+            try {
+                Class critterType = Class.forName(Critter.myPackage + "." + critterName);
+                Method m = critterType.getMethod("runStats", java.util.List.class);
+                String output = (String)m.invoke(critterList.getClass(), critterList);
+                messageBox.appendText(output + "\n");
+            } catch (Exception e) {
+                System.out.println("No method");
+            }
+        }
+        messageBox.appendText("-----------------------------------\n");
     }
 
     public void seedButton(ActionEvent event) {
@@ -184,7 +207,7 @@ public class Controller {
         Critter.setSeed(num);
     }
 
-    public void stepButton(ActionEvent event) {
+    public void stepButton(ActionEvent event) throws InvalidCritterException {
         int num;
         String input = stepTextField.getText();
 
@@ -205,6 +228,7 @@ public class Controller {
         }
 
         Critter.displayWorld(Main.canvas);
+        outputStats();
     }
 
     public void playButton(ActionEvent event) {
@@ -217,15 +241,63 @@ public class Controller {
         }
     }
 
-    public void toggleGridButton(ActionEvent event) {
+    public void toggleGridButton(ActionEvent event) throws InvalidCritterException {
         Critter.gridFlag = !Critter.gridFlag;
         Critter.displayWorld(Main.canvas);
-
     }
 
     public void displayMessage(String message) {
         messageBox.appendText(message + "\n");
     }
 
+    public void statsButton(ActionEvent event) {
+        Stage stage = new Stage();
+        VBox box = new VBox();
+        box.setPadding(new Insets(10));
+        // How to center align content in a layout manager in JavaFX
+        box.setAlignment(Pos.CENTER);
+        Label label = new Label("Select which Critters to display stats");
 
+        CheckBoxTreeItem checkBox = new CheckBoxTreeItem<>();
+        CheckBoxTreeItem<String> critterNames = new CheckBoxTreeItem<String>("Critters");
+        critterNames.setExpanded(true);
+
+        for(String s: critterNameList) {
+            CheckBoxTreeItem<String> c = new CheckBoxTreeItem<String>(s);
+            critterNames.getChildren().add(c);
+        }
+
+        // create the treeView
+        final TreeView<String> treeView = new TreeView<String>();
+        treeView.setRoot(critterNames);
+
+        // set the cell factory
+        treeView.setCellFactory(CheckBoxTreeCell.<String>forTreeView());
+
+        Button btnLogin = new Button();
+        btnLogin.setText("OK");
+        btnLogin.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                statsList = FXCollections.observableArrayList();
+                findCheckedItems((CheckBoxTreeItem<?>) treeView.getRoot(), statsList);
+                stage.close(); // return to main window
+            }
+        });
+        box.getChildren().add(label);
+        box.getChildren().add(treeView);
+        box.getChildren().add(btnLogin);
+        Scene scene = new Scene(box, 250, 150);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    private void findCheckedItems(CheckBoxTreeItem<?> item, ObservableList<String> checkedItems) {
+        if (item.isSelected()) {
+            checkedItems.add((String)item.getValue());
+        }
+        for (TreeItem<?> child : item.getChildren()) {
+            findCheckedItems((CheckBoxTreeItem<?>) child, checkedItems);
+        }
+    }
 }
