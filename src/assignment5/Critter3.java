@@ -1,6 +1,5 @@
-/* CRITTERS Critter3.java
- * EE422C Project 4 submission by
- * Replace <...> with your actual data.
+package assignment5;
+/* EE422C Project 5 submission by
  * <ThienSon Ho>
  * <tsh848>
  * <15505>
@@ -9,14 +8,7 @@
  * <15505>
  * Slip days used: <0>
  * Spring 2018
- * 
- * The Critter3 class Establishes the first Critter3 as the queen. The queen documents her position relative to where
- * she started. The queen creates Drone Critter3s that go fight and collect energy for her to consume. All The Critter3s
- * work together to ensure the queens survival by providing her with energy; however the queen isn't the only critter that 
- * reproduces. Drones reproduce to ensure the survival of the colony and to collect more energy to give the queen.
  */
-package assignment5;
-
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
@@ -112,6 +104,7 @@ public class Critter3 extends Critter{
 	@Override
 	public void doTimeStep() {
 		// If the critter can't breed or is weak, return to the queen
+
 		if(life <= 0 || this.getEnergy() < 20) {
 			//gets info regarding this and queen position
 			int x = position.get(this.index)[0];
@@ -222,7 +215,9 @@ public class Critter3 extends Critter{
 				// If there exists a position to move, spawn a critter in the previous location
 				if(isUnique && life > 0) {
 					life--;
-					walk((i + rand) % 8);
+					int direction= (i + rand) % 8;
+					look(direction, true);
+					walk(direction);
 					Critter3 newCritter = new Critter3((i+rand) %  8,this.index, 5);
 					reproduce(newCritter, (i + rand + 4) % 8);
 				}

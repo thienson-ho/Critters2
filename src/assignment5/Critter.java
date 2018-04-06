@@ -1,5 +1,14 @@
 package assignment5;
-
+/* EE422C Project 5 submission by
+ * <ThienSon Ho>
+ * <tsh848>
+ * <15505>
+ * <Arjun Singh>
+ * <AS78363>
+ * <15505>
+ * Slip days used: <0>
+ * Spring 2018
+ */
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -43,11 +52,25 @@ public abstract class Critter {
 	 * shape, at least, that's the intent. You can edit these default methods however you 
 	 * need to, but please preserve that intent as you implement them. 
 	 */
+
+	/**
+	 *
+	 * @return returns white by default
+	 */
 	public javafx.scene.paint.Color viewColor() { 
 		return javafx.scene.paint.Color.WHITE; 
 	}
-	
+
+	/**
+	 * Outline color of the critter shape
+	 * @return color
+	 */
 	public javafx.scene.paint.Color viewOutlineColor() { return viewColor(); }
+
+	/**
+	 * Fill color of the critter shape
+	 * @return color
+	 */
 	public javafx.scene.paint.Color viewFillColor() { return viewColor(); }
 	
 	public abstract CritterShape viewShape(); 
@@ -60,10 +83,20 @@ public abstract class Critter {
 	static {
 		myPackage = Critter.class.getPackage().toString().split(" ")[1];
 	}
-	
+
+	/**
+	 * Examines the location identified by the critter's current coordinates and moving one or two positions in the in
+	 * @param direction to look in
+	 * @param steps false if one step, true if two steps
+	 * @return toString of critter occupying the location or null if no critters
+	 */
 	protected final String look(int direction, boolean steps) {
-		int numSteps = !steps ? 1 : 2;
+		this.energy -= Params.look_energy_cost;
 		int[] newCoord = move(direction);
+		if(steps) {
+			newCoord = move(direction);
+		}
+
 		if(isOccupied(newCoord[0],newCoord[1])) {
 			for(Critter c: population) {
 				if(c.compareLocation(newCoord[0],newCoord[1])) {
@@ -170,8 +203,6 @@ public abstract class Critter {
 	private boolean isOccupied(int x, int y) {
 		for(Critter c: population) {
 			if(c.compareLocation(x,y)) {
-//                System.out.println("OCCUPIED!");
-
 				return true;
 			}
 		}
@@ -285,8 +316,10 @@ public abstract class Critter {
 	 * @return true if it wants to fight, false if it doesn't
 	 */
 	public abstract boolean fight(String opponent);
-	
-	
+
+	/**
+	 * Does time steps for every critter handling encounters and reproduction and produces algae
+	 */
 	public static void worldTimeStep() {
 		//Do time steps
 		for(Critter c: population) {
@@ -415,7 +448,7 @@ public abstract class Critter {
 		}
 
 		//create new algae
-//		genAlgae();
+		genAlgae();
 
 		//add babies
 		population.addAll(babies);
@@ -423,6 +456,9 @@ public abstract class Critter {
 
 	}
 
+	/**
+	 * Generates number of algae based on Params.refresh_algae_count
+	 */
 	private static void genAlgae() {
 		for(int i = 0; i < Params.refresh_algae_count; i++) {
 			try {
@@ -433,6 +469,10 @@ public abstract class Critter {
 		}
 	}
 
+	/**
+	 * Draws a 2D grid representation of the critter world on a canvas
+	 * @param pane place to add canvas
+	 */
 	public static void displayWorld(Object pane) { 
 	/* Alternate displayWorld, where you use Main.<pane> to reach into your
 	   display component.
@@ -553,58 +593,6 @@ public abstract class Critter {
 	}
 
 	/**
-	 * ASCII representation of the world
-	 */
-	/*
-	public static void displayWorld() {
-
-		//create the top and bottom border and empty world row
-		String border = "+";
-		String row = "|";
-		for(int i = 0; i < Params.world_width; i++) {
-			border += "-";
-			row += " ";
-		}
-		border += "+";
-		row += "|";
-
-		//Add empty rows to world
-		ArrayList<String> world = new ArrayList<>();
-		for(int i = 0; i < Params.world_height; i++) {
-			world.add(row);
-		}
-
-		//Top border
-		System.out.println(border);
-
-		//Put the critters in the correct positions
-		for(Critter c: population) {
-			int x = c.x_coord;
-			int y = c.y_coord;
-
-			String currentRow = world.get(y);
-			String newRow = currentRow.substring(0, x + 1) + c.toString() + currentRow.substring(x + 2);
-			world.set(y,newRow);
-		}
-
-		//Print each row of the world
-		for(String s: world) {
-			System.out.println(s);
-		}
-
-		//Bottom border
-		System.out.println(border);
-
-//		System.out.println("Number of critters: " + population.size());
-//		Critter.runStats(population);
-//		for(Critter c: population) {
-//			System.out.println("X: " + c.x_coord);
-//			System.out.println("Y: " + c.y_coord);
-//		}
-	}
-	*/
-
-	/**
 	 * create and initialize a Critter subclass.
 	 * critter_class_name must be the unqualified name of a concrete subclass of Critter, if not,
 	 * an InvalidCritterException must be thrown.
@@ -632,7 +620,13 @@ public abstract class Critter {
 		}
 
 	}
-	
+
+	/**
+	 * Finds all instane of a Critter in the world
+	 * @param critter_class_name the critter to find
+	 * @return List of all critters of the specified name
+	 * @throws InvalidCritterException
+	 */
 	public static List<Critter> getInstances(String critter_class_name) throws InvalidCritterException {
 		List<Critter> result = new java.util.ArrayList<Critter>();
 		try {
@@ -648,7 +642,12 @@ public abstract class Critter {
 
 		return result;
 	}
-	
+
+	/**
+	 * Changed default runstats so Algae outputs something
+	 * @param critters the List of all critters of the specified type
+	 * @return message to display for stats
+	 */
 	public static String runStats(List<Critter> critters) {
 		if(critters.size() == 0) {
 			return "No critters of this type";

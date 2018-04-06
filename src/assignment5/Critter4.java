@@ -1,6 +1,11 @@
-/* CRITTERS Critter4.java
- * EE422C Project 4 submission by
- * Replace <...> with your actual data.
+/**
+ * The Critter4 class describes a vicious Critter that multiplies and eats all the Algae it can (an army). It is like a microbe
+ * that only feeds on algae, it doesn't  eat any other organism. It will rapidly teraform the map with this and potentially
+ * feed many predators, a bloom. The species doesn't move, it acts like a weed. If there no immediately adjacent algae it dies out
+ *  
+ */
+package assignment5;
+/* EE422C Project 5 submission by
  * <ThienSon Ho>
  * <tsh848>
  * <15505>
@@ -9,15 +14,7 @@
  * <15505>
  * Slip days used: <0>
  * Spring 2018
- * 
- * 
- * The Critter4 class describes a vicious Critter that multiplies and eats all the Algae it can (an army). It is like a microbe
- * that only feeds on algae, it doesn't  eat any other organism. It will rapidly teraform the map with this and potentially
- * feed many predators, a bloom. The species doesn't move, it acts like a weed. If there no immediately adjacent algae it dies out
- *  
  */
-package assignment5;
-
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
@@ -135,13 +132,13 @@ public class Critter4 extends Critter{
         String output;
 
         if(army > 1) {
-        	output = "" + army + " Critter4s threw hands with " + algaeFought + " @";
+        	output = "" + army + " Critter4s threw hands with " + algaeFought + " Algae";
         }else if(army < 1) {
 			output = "R.I.P. Army";
         }else if(army == 1 && critter4s.size() != 1){
-			output = "" + army + " Critter4 threw hands with " + algaeFought + " @";
+			output = "" + army + " Critter4 threw hands with " + algaeFought + " Algae";
         }else {
-			output = "A Critter4 threw hands with " + algaeFought + " @";
+			output = "A Critter4 threw hands with " + algaeFought + " Algae";
         }
         return output;
     }

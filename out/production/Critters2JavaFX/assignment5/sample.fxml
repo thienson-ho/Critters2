@@ -32,7 +32,7 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Button fx:id="btn_make" mnemonicParsing="false" onAction="#makeButton" prefHeight="31.0" prefWidth="91.0" text="Make" GridPane.rowIndex="1" />
+      <Button fx:id="btn_make" mnemonicParsing="false" onAction="#makeButton" prefHeight="31.0" prefWidth="91.0" text="Make -&gt;" GridPane.rowIndex="1" />
       <Button fx:id="btn_stats" mnemonicParsing="false" onAction="#statsButton" prefHeight="31.0" prefWidth="130.0" text="Stats" GridPane.columnIndex="2" />
       <Button fx:id="btn_seed" mnemonicParsing="false" onAction="#seedButton" prefHeight="31.0" prefWidth="90.0" text="Seed -&gt;" GridPane.rowIndex="3" />
       <Button fx:id="btn_step" mnemonicParsing="false" onAction="#stepButton" prefHeight="31.0" prefWidth="90.0" text="Step -&gt;" GridPane.rowIndex="2" />
@@ -45,15 +45,16 @@
       <TextField fx:id="makeTextField" promptText="Enter number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label prefHeight="21.0" prefWidth="89.0" text=" Critter Type:" />
       <Button mnemonicParsing="false" onAction="#toggleGridButton" prefHeight="31.0" prefWidth="121.0" text="Toggle Grid" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <ToggleButton fx:id="toggleButton" mnemonicParsing="false" onAction="#playButton" prefHeight="31.0" prefWidth="135.0" text="&lt;- Play" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <ToggleButton fx:id="toggleButton" mnemonicParsing="false" onAction="#playButton" prefHeight="31.0" prefWidth="131.0" text="&lt;- Play" GridPane.columnIndex="2" GridPane.rowIndex="2" />
       <ScrollPane maxWidth="434.0" minWidth="10.0" prefHeight="100.0" prefWidth="410.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
          <content>
-            <TextArea fx:id="messageBox" prefHeight="322.0" prefWidth="389.0">
+            <TextArea fx:id="messageBox" prefHeight="303.0" prefWidth="445.0">
                <font>
                   <Font size="14.0" />
                </font></TextArea>
          </content>
       </ScrollPane>
+      <Button mnemonicParsing="false" onAction="#instructionButton" prefHeight="31.0" prefWidth="132.0" text="Instructions" GridPane.columnIndex="2" GridPane.rowIndex="1" />
    </children>
    <padding>
       <Insets bottom="10.0" left="10.0" top="5.0" />

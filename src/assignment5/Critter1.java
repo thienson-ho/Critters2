@@ -1,6 +1,6 @@
-/* CRITTERS Critter1.java
- * EE422C Project 4 submission by
- * Replace <...> with your actual data.
+
+package assignment5;
+/* EE422C Project 5 submission by
  * <ThienSon Ho>
  * <tsh848>
  * <15505>
@@ -10,13 +10,6 @@
  * Slip days used: <0>
  * Spring 2018
  */
-/**
- * This critter constantly moves in a circle (four square box). It keeps track of how many circles it has completed.
- * It never wants to fight but instead tries to walk away in the current direction it's supposed to move in.
- */
-
-package assignment5;
-
 import javafx.scene.paint.Color;
 
 public class Critter1 extends Critter {
@@ -74,6 +67,7 @@ public class Critter1 extends Critter {
      */
     @Override
     public boolean fight(String opponent) {
+        look(direction, true);
         walk(direction);
         direction = nextDirection(direction);
         if(direction == 2) {

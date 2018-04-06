@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Open Files" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Algae.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Algae.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/AlgaephobicCritter.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/AlgaephobicCritter.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Controller$1.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Controller$1.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Controller$2.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Controller$2.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Controller.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Controller.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Craig.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Craig.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter$1.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter$CritterShape.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter$CritterShape.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter$TestCritter.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter$TestCritter.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter1.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter2.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter2.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter3.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter3.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter4.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Critter4.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/InvalidCritterException.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/InvalidCritterException.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Main$scaleCanvas.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Main$scaleCanvas.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Main.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Main.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Params.class" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/Params.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/sample.fxml" afterPath="$PROJECT_DIR$/out/production/Critters2JavaFX/assignment5/sample.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/Algae.java" afterPath="$PROJECT_DIR$/src/assignment5/Algae.java" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/AlgaephobicCritter.java" afterPath="$PROJECT_DIR$/src/assignment5/AlgaephobicCritter.java" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/Controller.java" afterPath="$PROJECT_DIR$/src/assignment5/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/Craig.java" afterPath="$PROJECT_DIR$/src/assignment5/Craig.java" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter.java" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter1.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter1.java" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter2.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter2.java" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/Critter3.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter3.java" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/Critter4.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter4.java" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/Header.java" afterPath="$PROJECT_DIR$/src/assignment5/Header.java" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/InvalidCritterException.java" afterPath="$PROJECT_DIR$/src/assignment5/InvalidCritterException.java" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/Main.java" afterPath="$PROJECT_DIR$/src/assignment5/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/Params.java" afterPath="$PROJECT_DIR$/src/assignment5/Params.java" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/sample.fxml" afterPath="$PROJECT_DIR$/src/assignment5/sample.fxml" />
     </list>
@@ -71,18 +99,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Critter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Critter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2646">
-              <caret line="148" column="45" lean-forward="false" selection-start-line="148" selection-start-column="45" selection-end-line="148" selection-end-column="45" />
+            <state relative-caret-position="148">
+              <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
               <folding>
-                <element signature="e#2449#2450#0" expanded="true" />
-                <element signature="e#2480#2481#0" expanded="true" />
-                <element signature="e#2527#2528#0" expanded="true" />
-                <element signature="e#2571#2572#0" expanded="true" />
-                <element signature="e#6186#6187#0" expanded="true" />
-                <element signature="e#6228#6229#0" expanded="true" />
+                <element signature="class#CritterShape#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#viewColor#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#viewOutlineColor#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#viewFillColor#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#look#0;class#Critter#0" expanded="false" />
+                <element signature="method#look#0;class#Critter#0" expanded="false" />
+                <element signature="e#3136#3137#0" expanded="true" />
+                <element signature="e#3167#3168#0" expanded="true" />
+                <element signature="e#3214#3215#0" expanded="true" />
+                <element signature="e#3258#3259#0" expanded="true" />
+                <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
+                <element signature="method#walk#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
+                <element signature="method#run#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#isOccupied#0;class#Critter#0" expanded="false" />
+                <element signature="method#isOccupied#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#move#0;class#Critter#0" expanded="false" />
+                <element signature="method#move#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#compareLocation#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#reproduce#0;class#Critter#0" expanded="false" />
+                <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#doTimeStep#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#fight#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#genAlgae#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#displayWorld#0;class#Critter#0" expanded="false" />
+                <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#makeCritter#0;class#Critter#0" expanded="false" />
+                <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#getInstances#0;class#Critter#0" expanded="false" />
+                <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#runStats#0;class#Critter#0" expanded="false" />
+                <element signature="method#runStats#0;class#Critter#0" expanded="false" />
+                <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+                <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -91,10 +148,33 @@
       <file leaf-file-name="Critter3.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Critter3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4914">
-              <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Header.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment5/Header.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <folding>
+                <element signature="e#2729#2730#0" expanded="true" />
+                <element signature="e#2757#2758#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,10 +183,60 @@
       <file leaf-file-name="Critter4.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Critter4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2436">
-              <caret line="139" column="34" lean-forward="false" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
+            <state relative-caret-position="0">
+              <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment5/sample.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+              <folding>
+                <marker date="1522976023396" expanded="true" signature="3673:3685" ph="..." />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment5/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-230">
+              <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+              <folding>
+                <element signature="docComment;method#initialize#0;class#Controller#0" expanded="false" />
+                <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#animate#0;class#Controller#0" expanded="false" />
+                <element signature="method#animate#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#isInteger#0;class#Controller#0" expanded="false" />
+                <element signature="method#isInteger#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#makeButton#0;class#Controller#0" expanded="false" />
+                <element signature="method#makeButton#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#outputStats#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#seedButton#0;class#Controller#0" expanded="false" />
+                <element signature="method#seedButton#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#stepButton#0;class#Controller#0" expanded="false" />
+                <element signature="method#stepButton#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#playButton#0;class#Controller#0" expanded="false" />
+                <element signature="method#playButton#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#toggleGridButton#0;class#Controller#0" expanded="false" />
+                <element signature="method#toggleGridButton#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#displayMessage#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#statsButton#0;class#Controller#0" expanded="false" />
+                <element signature="method#statsButton#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#findCheckedItems#0;class#Controller#0" expanded="false" />
+                <element signature="method#findCheckedItems#0;class#Controller#0" expanded="false" />
+                <element signature="docComment;method#instructionButton#0;class#Controller#0" expanded="false" />
+                <element signature="method#instructionButton#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -115,11 +245,11 @@
       <file leaf-file-name="Critter1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Critter1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2037">
-              <caret line="112" column="4" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="121" selection-end-column="74" />
+            <state relative-caret-position="231">
+              <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
               <folding>
-                <element signature="e#3281#3282#0" expanded="true" />
-                <element signature="e#3307#3308#0" expanded="true" />
+                <element signature="e#3011#3012#0" expanded="true" />
+                <element signature="e#3037#3038#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,67 +258,11 @@
       <file leaf-file-name="Critter2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Critter2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1953">
-              <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Params.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment5/Params.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Craig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1365">
-              <caret line="65" column="88" lean-forward="false" selection-start-line="65" selection-start-column="88" selection-end-line="65" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment5/sample.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="37" column="77" lean-forward="false" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
+            <state relative-caret-position="315">
+              <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding>
-                <marker date="1522976023396" expanded="true" signature="3673:3685" ph="..." />
+                <element signature="e#0#2867#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assignment5/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="110" column="0" lean-forward="true" selection-start-line="109" selection-start-column="5" selection-end-line="110" selection-end-column="0" />
-              <folding>
-                <element signature="e#7036#7037#0" expanded="true" />
-                <element signature="e#7089#7090#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Algae.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment5/Algae.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -197,7 +271,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>disp</find>
       <find>seed</find>
       <find>worldTim</find>
       <find>iter</find>
@@ -224,6 +297,10 @@
       <find>outputst</find>
       <find>-----</find>
       <find>look</find>
+      <find>Welc</find>
+      <find>is not</find>
+      <find>--</find>
+      <find>genAlg</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -242,17 +319,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/assignment5/Main.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/AlgaephobicCritter.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/Algae.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/Controller.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/Craig.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/Critter.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Critter1.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Critter2.java" />
-        <option value="$PROJECT_DIR$/src/assignment5/Craig.java" />
-        <option value="$PROJECT_DIR$/src/assignment5/Algae.java" />
-        <option value="$PROJECT_DIR$/src/assignment5/Critter.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Critter3.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Critter4.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/Header.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/InvalidCritterException.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/Main.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Params.java" />
         <option value="$PROJECT_DIR$/src/assignment5/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/assignment5/Controller.java" />
       </list>
     </option>
   </component>
@@ -497,6 +577,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20451693" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -514,7 +595,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -526,7 +606,31 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/assignment5/Critter.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/assignment5/Controller.java</url>
+          <line>277</line>
+          <properties class="assignment5.Controller" method="playButton">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/assignment5/Controller.java</url>
+          <line>307</line>
+          <properties class="assignment5.Controller" method="statsButton">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -540,12 +644,41 @@
         <state relative-caret-position="2646">
           <caret line="148" column="45" lean-forward="false" selection-start-line="148" selection-start-column="45" selection-end-line="148" selection-end-column="45" />
           <folding>
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#2480#2481#0" expanded="true" />
-            <element signature="e#2527#2528#0" expanded="true" />
-            <element signature="e#2571#2572#0" expanded="true" />
-            <element signature="e#6186#6187#0" expanded="true" />
-            <element signature="e#6228#6229#0" expanded="true" />
+            <element signature="class#CritterShape#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewOutlineColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewFillColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#look#0;class#Critter#0" expanded="false" />
+            <element signature="method#look#0;class#Critter#0" expanded="false" />
+            <element signature="e#3136#3137#0" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3214#3215#0" expanded="true" />
+            <element signature="e#3258#3259#0" expanded="true" />
+            <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
+            <element signature="method#run#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#isOccupied#0;class#Critter#0" expanded="false" />
+            <element signature="method#isOccupied#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#move#0;class#Critter#0" expanded="false" />
+            <element signature="method#move#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#compareLocation#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#doTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#fight#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#genAlgae#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -583,8 +716,8 @@
         <state relative-caret-position="2037">
           <caret line="112" column="4" lean-forward="true" selection-start-line="112" selection-start-column="4" selection-end-line="121" selection-end-column="74" />
           <folding>
-            <element signature="e#3281#3282#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3037#3038#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -610,8 +743,30 @@
         <state relative-caret-position="6048">
           <caret line="313" column="36" lean-forward="false" selection-start-line="313" selection-start-column="36" selection-end-line="313" selection-end-column="36" />
           <folding>
-            <element signature="e#7036#7037#0" expanded="true" />
-            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="docComment;method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#outputStats#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#displayMessage#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#instructionButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#instructionButton#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -642,8 +797,8 @@
         <state relative-caret-position="1281">
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
-            <element signature="e#2573#2574#0" expanded="true" />
-            <element signature="e#2601#2602#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
+            <element signature="e#2757#2758#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -653,12 +808,41 @@
         <state relative-caret-position="9744">
           <caret line="464" column="9" lean-forward="false" selection-start-line="464" selection-start-column="9" selection-end-line="464" selection-end-column="9" />
           <folding>
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#2480#2481#0" expanded="true" />
-            <element signature="e#2527#2528#0" expanded="true" />
-            <element signature="e#2571#2572#0" expanded="true" />
-            <element signature="e#6186#6187#0" expanded="true" />
-            <element signature="e#6228#6229#0" expanded="true" />
+            <element signature="class#CritterShape#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewOutlineColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewFillColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#look#0;class#Critter#0" expanded="false" />
+            <element signature="method#look#0;class#Critter#0" expanded="false" />
+            <element signature="e#3136#3137#0" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3214#3215#0" expanded="true" />
+            <element signature="e#3258#3259#0" expanded="true" />
+            <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
+            <element signature="method#run#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#isOccupied#0;class#Critter#0" expanded="false" />
+            <element signature="method#isOccupied#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#move#0;class#Critter#0" expanded="false" />
+            <element signature="method#move#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#compareLocation#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#doTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#fight#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#genAlgae#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -668,8 +852,8 @@
         <state relative-caret-position="1995">
           <caret line="110" column="4" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="4" />
           <folding>
-            <element signature="e#3281#3282#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3037#3038#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -686,6 +870,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -694,8 +879,30 @@
         <state relative-caret-position="1575">
           <caret line="88" column="0" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="88" selection-end-column="0" />
           <folding>
-            <element signature="e#7036#7037#0" expanded="true" />
-            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="docComment;method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#outputStats#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#displayMessage#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#instructionButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#instructionButton#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -734,8 +941,8 @@
         <state relative-caret-position="231">
           <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
-            <element signature="e#2573#2574#0" expanded="true" />
-            <element signature="e#2601#2602#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
+            <element signature="e#2757#2758#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -745,12 +952,41 @@
         <state relative-caret-position="8694">
           <caret line="414" column="5" lean-forward="true" selection-start-line="414" selection-start-column="5" selection-end-line="414" selection-end-column="5" />
           <folding>
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#2480#2481#0" expanded="true" />
-            <element signature="e#2527#2528#0" expanded="true" />
-            <element signature="e#2571#2572#0" expanded="true" />
-            <element signature="e#6186#6187#0" expanded="true" />
-            <element signature="e#6228#6229#0" expanded="true" />
+            <element signature="class#CritterShape#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewOutlineColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewFillColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#look#0;class#Critter#0" expanded="false" />
+            <element signature="method#look#0;class#Critter#0" expanded="false" />
+            <element signature="e#3136#3137#0" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3214#3215#0" expanded="true" />
+            <element signature="e#3258#3259#0" expanded="true" />
+            <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
+            <element signature="method#run#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#isOccupied#0;class#Critter#0" expanded="false" />
+            <element signature="method#isOccupied#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#move#0;class#Critter#0" expanded="false" />
+            <element signature="method#move#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#compareLocation#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#doTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#fight#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#genAlgae#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -759,6 +995,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -766,6 +1003,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -810,8 +1048,30 @@
         <state relative-caret-position="3591">
           <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#7036#7037#0" expanded="true" />
-            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="docComment;method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#outputStats#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#displayMessage#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#instructionButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#instructionButton#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -821,8 +1081,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2573#2574#0" expanded="true" />
-            <element signature="e#2601#2602#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
+            <element signature="e#2757#2758#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -832,8 +1092,30 @@
         <state relative-caret-position="42">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#7036#7037#0" expanded="true" />
-            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="docComment;method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#outputStats#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#displayMessage#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#instructionButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#instructionButton#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -843,8 +1125,8 @@
         <state relative-caret-position="84">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#2573#2574#0" expanded="true" />
-            <element signature="e#2601#2602#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
+            <element signature="e#2757#2758#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -867,16 +1149,31 @@
         <state relative-caret-position="84">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#7036#7037#0" expanded="true" />
-            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="docComment;method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#outputStats#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#displayMessage#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#instructionButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#instructionButton#0;class#Controller#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/InvalidCritterException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -896,120 +1193,190 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/AlgaephobicCritter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-609">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-          <folding>
-            <element signature="e#2573#2574#0" expanded="true" />
-            <element signature="e#2601#2602#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1953">
-          <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="65" column="88" lean-forward="false" selection-start-line="65" selection-start-column="88" selection-end-line="65" selection-end-column="88" />
+        <state relative-caret-position="231">
+          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Algae.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Critter1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2037">
-          <caret line="112" column="4" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="121" selection-end-column="74" />
+        <state relative-caret-position="231">
+          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           <folding>
-            <element signature="e#3281#3282#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3037#3038#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter3.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4914">
-          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#2867#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Critter4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2436">
-          <caret line="139" column="34" lean-forward="false" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Params.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2646">
-          <caret line="148" column="45" lean-forward="false" selection-start-line="148" selection-start-column="45" selection-end-line="148" selection-end-column="45" />
+        <state relative-caret-position="210">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding>
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#2480#2481#0" expanded="true" />
-            <element signature="e#2527#2528#0" expanded="true" />
-            <element signature="e#2571#2572#0" expanded="true" />
-            <element signature="e#6186#6187#0" expanded="true" />
-            <element signature="e#6228#6229#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Header.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/InvalidCritterException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#2729#2730#0" expanded="true" />
+            <element signature="e#2757#2758#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Params.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/sample.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="37" column="77" lean-forward="false" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
           <folding>
             <marker date="1522976023396" expanded="true" signature="3673:3685" ph="..." />
           </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+      <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="110" column="0" lean-forward="true" selection-start-line="109" selection-start-column="5" selection-end-line="110" selection-end-column="0" />
+        <state relative-caret-position="-230">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding>
-            <element signature="e#7036#7037#0" expanded="true" />
-            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="docComment;method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="method#animate#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="method#isInteger#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#outputStats#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#seedButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#stepButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#playButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#toggleGridButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#displayMessage#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#statsButton#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="method#findCheckedItems#0;class#Controller#0" expanded="false" />
+            <element signature="docComment;method#instructionButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#instructionButton#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="class#CritterShape#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewOutlineColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#viewFillColor#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#look#0;class#Critter#0" expanded="false" />
+            <element signature="method#look#0;class#Critter#0" expanded="false" />
+            <element signature="e#3136#3137#0" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3214#3215#0" expanded="true" />
+            <element signature="e#3258#3259#0" expanded="true" />
+            <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
+            <element signature="method#run#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#isOccupied#0;class#Critter#0" expanded="false" />
+            <element signature="method#isOccupied#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#move#0;class#Critter#0" expanded="false" />
+            <element signature="method#move#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#compareLocation#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#doTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#fight#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#genAlgae#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
           </folding>
         </state>
       </provider>

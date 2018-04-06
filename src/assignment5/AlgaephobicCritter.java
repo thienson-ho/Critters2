@@ -1,5 +1,15 @@
-package assignment5;
 
+package assignment5;
+/* EE422C Project 5 submission by
+ * <ThienSon Ho>
+ * <tsh848>
+ * <15505>
+ * <Arjun Singh>
+ * <AS78363>
+ * <15505>
+ * Slip days used: <0>
+ * Spring 2018
+ */
 //import project5.Critter.CritterShape;
 
 public class AlgaephobicCritter extends Critter {

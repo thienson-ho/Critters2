@@ -1,5 +1,14 @@
 package assignment5;
-
+/* EE422C Project 5 submission by
+ * <ThienSon Ho>
+ * <tsh848>
+ * <15505>
+ * <Arjun Singh>
+ * <AS78363>
+ * <15505>
+ * Slip days used: <0>
+ * Spring 2018
+ */
 import javafx.animation.AnimationTimer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -51,6 +60,9 @@ public class Controller {
 
     private ObservableList<String> statsList;
 
+    /**
+     * Initializes control components of the scene
+     */
     @FXML
     private void initialize() {
 
@@ -65,7 +77,7 @@ public class Controller {
             try {
                 classNames.add(Class.forName(Critter.myPackage + "." + s.substring(0,s.indexOf('.'))));
             } catch (ClassNotFoundException e) {
-                System.out.println(s + " is not a class");
+
             }
         }
 
@@ -109,6 +121,10 @@ public class Controller {
         messageBox.appendText(s);
     }
 
+    /**
+     * Animates the critter world based on the step/play speed
+     * @throws InvalidCritterException
+     */
     private void animate() throws InvalidCritterException {
         int num;
         String input = stepTextField.getText();
@@ -129,6 +145,11 @@ public class Controller {
         outputStats();
     }
 
+    /**
+     * Checks if a parsed String is a valid integer
+     * @param string to parse
+     * @return true or false
+     */
     private boolean isInteger(String string) {
         try {
             Integer.valueOf(string);
@@ -138,6 +159,10 @@ public class Controller {
         }
     }
 
+    /**
+     * Button command to make critters depending on the selection from the drop down menu
+     * @param event
+     */
     public void makeButton(ActionEvent event) {
 //        System.out.println("Make Button");
         int num;
@@ -168,6 +193,10 @@ public class Controller {
 
     }
 
+    /**
+     * Displays stats of the selected critters to the message box
+     * @throws InvalidCritterException
+     */
     public void outputStats() throws InvalidCritterException {
         if(statsList == null || statsList.isEmpty()) {
             return;
@@ -187,9 +216,13 @@ public class Controller {
                 System.out.println("No method");
             }
         }
-        messageBox.appendText("-----------------------------------\n");
+        messageBox.appendText("-------------------------------------------------------------------\n");
     }
 
+    /**
+     * Sets the random seed
+     * @param event
+     */
     public void seedButton(ActionEvent event) {
         if(seedTextField.getText() == null) {
             messageBox.appendText("Invalid seed\n");
@@ -209,6 +242,11 @@ public class Controller {
         Critter.setSeed(num);
     }
 
+    /**
+     * Button to step through the grid depending on the number of desired times
+     * @param event
+     * @throws InvalidCritterException
+     */
     public void stepButton(ActionEvent event) throws InvalidCritterException {
         int num;
         String input = stepTextField.getText();
@@ -233,6 +271,10 @@ public class Controller {
         outputStats();
     }
 
+    /**
+     * Calls the animate function to animate the world. Stops animating when pressed again.
+     * @param event
+     */
     public void playButton(ActionEvent event) {
         if(toggleButton.isSelected()) {
             a.start();
@@ -241,15 +283,28 @@ public class Controller {
         }
     }
 
+    /**
+     * Toggles the grid of the map
+     * @param event
+     * @throws InvalidCritterException
+     */
     public void toggleGridButton(ActionEvent event) throws InvalidCritterException {
         Critter.gridFlag = !Critter.gridFlag;
         Critter.displayWorld(Main.canvas);
     }
 
+    /**
+     * public function to display anything to the message box
+     * @param message
+     */
     public void displayMessage(String message) {
         messageBox.appendText(message + "\n");
     }
 
+    /**
+     * Button to display stats to messagebox
+     * @param event
+     */
     public void statsButton(ActionEvent event) {
         Stage stage = new Stage();
         VBox box = new VBox();
@@ -293,6 +348,11 @@ public class Controller {
         stage.show();
     }
 
+    /**
+     * Finds the selected Critters of the stats function
+     * @param item to check
+     * @param checkedItems
+     */
     private void findCheckedItems(CheckBoxTreeItem<?> item, ObservableList<String> checkedItems) {
         if (item.isSelected()) {
             checkedItems.add((String)item.getValue());
@@ -302,11 +362,16 @@ public class Controller {
         }
     }
 
+    /**
+     * Displays simulation controls in message box
+     * @param event
+     */
     public void instructionButton(ActionEvent event) {
         String output =
         "Select the type of critter to make with the drop down menu.\n"
         + "Enter the number of critters to make (default is 1)\n"
         + "Enter the number of steps or simulation speed.\n"
+        + "Press Play to start and stop simulation\n"
         + "Enter the seed number for the random generator to use.\n"
         + "Use toggle grid to turn on/off the grid lines.\n"
         + "Press the stats button to select which critters to display stats for.\n"

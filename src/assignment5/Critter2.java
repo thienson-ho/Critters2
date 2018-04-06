@@ -1,6 +1,10 @@
-/* CRITTERS Crtter2.java
- * EE422C Project 4 submission by
- * Replace <...> with your actual data.
+
+/**
+ * This critter flips a coin to determine if it wants to walk or run during each time step. It keeps track of the total
+ * times it has walked and ran and the number of fights it has been in. This critter does not fight it’s own species.
+ */
+package assignment5;
+/* EE422C Project 5 submission by
  * <ThienSon Ho>
  * <tsh848>
  * <15505>
@@ -10,12 +14,6 @@
  * Slip days used: <0>
  * Spring 2018
  */
-/**
- * This critter flips a coin to determine if it wants to walk or run during each time step. It keeps track of the total
- * times it has walked and ran and the number of fights it has been in. This critter does not fight it’s own species.
- */
-package assignment5;
-
 import javafx.scene.paint.Color;
 
 public class Critter2 extends Critter{
