@@ -18,6 +18,8 @@
  */
 package assignment5;
 
+import javafx.scene.paint.Color;
+
 import java.util.ArrayList;
 
 public class Critter4 extends Critter{
@@ -97,8 +99,14 @@ public class Critter4 extends Critter{
 
 	@Override
 	public CritterShape viewShape() {
-		return null;
+		return CritterShape.CIRCLE;
 	}
+
+	@Override
+	public javafx.scene.paint.Color viewOutlineColor() {return Color.PINK;}
+
+	@Override
+	public javafx.scene.paint.Color viewFillColor() {return Color.MAROON;}
 
 	/**
 	 * returns the string representation of Critter4
@@ -124,16 +132,17 @@ public class Critter4 extends Critter{
             army++;
         }
         
-        //the String output
+        String output;
+
         if(army > 1) {
-        	System.out.println(army + " Critter4s threw hands with " + algaeFought + " @");
+        	output = "" + army + " Critter4s threw hands with " + algaeFought + " @";
         }else if(army < 1) {
-        	System.out.println("R.I.P. Army");
+			output = "R.I.P. Army";
         }else if(army == 1 && critter4s.size() != 1){
-        	System.out.println(army + " Critter4 threw hands with " + algaeFought + " @");
+			output = "" + army + " Critter4 threw hands with " + algaeFought + " @";
         }else {
-        	System.out.println("A Critter4 threw hands with " + algaeFought + " @");
+			output = "A Critter4 threw hands with " + algaeFought + " @";
         }
-        return "";
+        return output;
     }
 }

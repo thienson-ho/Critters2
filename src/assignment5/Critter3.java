@@ -17,6 +17,8 @@
  */
 package assignment5;
 
+import javafx.scene.paint.Color;
+
 import java.util.ArrayList;
 
 public class Critter3 extends Critter{
@@ -245,8 +247,15 @@ public class Critter3 extends Critter{
 
 	@Override
 	public CritterShape viewShape() {
-		return null;
+		return CritterShape.STAR;
 	}
+
+	@Override
+	public javafx.scene.paint.Color viewOutlineColor() {return Color.PURPLE;}
+
+	@Override
+	public javafx.scene.paint.Color viewFillColor() {return Color.RED;}@Override
+
 
 	/**
 	 * @return the char of 3 to represent on the grid
@@ -280,18 +289,21 @@ public class Critter3 extends Critter{
             	maxIndex = c.index;
             }
         }
-        
+
+        String output = "";
+
         //The print statements
         if(colony > 1) {
-        	System.out.println("The greatest among a colony of " + colony + " has an energy of " + maxEnergy);
-        	System.out.println("It resides at [" + position.get(maxIndex)[0] + "," + position.get(maxIndex)[1] + "], and pivots about [" + position.get(0)[0] + "," + position.get(0)[1] + "]");
+        	output = "The greatest among a colony of " + colony + " has an energy of " + maxEnergy
+					+ "\nIt resides at [" + position.get(maxIndex)[0] + "," + position.get(maxIndex)[1] + "], and pivots about [" + position.get(0)[0] + "," + position.get(0)[1] + "]";
         }else if(colony < 1) {
-        	System.out.println("R.I.P. Colony");
+        	output = "R.I.P. Colony";
         }else {
-        	System.out.println("A lone ant resides at [" + position.get(maxIndex)[0] + "," + position.get(maxIndex)[1] + "], and pivots about [" + position.get(0)[0] + "," + position.get(0)[1] + "]");
+        	output = "A lone ant resides at [" + position.get(maxIndex)[0] + "," + position.get(maxIndex)[1]
+					+ "], and pivots about [" + position.get(0)[0] + "," + position.get(0)[1] + "]";
         }
 
-        return "";
+        return output;
 	}
 }
 

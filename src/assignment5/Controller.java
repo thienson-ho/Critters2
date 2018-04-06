@@ -105,7 +105,7 @@ public class Controller {
 
         toggleButton.setStyle("-fx-base: green;");
 
-        String s = "Welcome to Critter Simulation\n";
+        String s = "Welcome to Critter Simulation by Arjun and ThienSon\n";
         messageBox.appendText(s);
     }
 
@@ -173,6 +173,8 @@ public class Controller {
             return;
         }
 
+        statsList.removeIf(s -> s.equals("Critters"));
+
         for(String critterName: statsList) {
             List<Critter> critterList = Critter.getInstances(critterName);
 
@@ -233,10 +235,8 @@ public class Controller {
 
     public void playButton(ActionEvent event) {
         if(toggleButton.isSelected()) {
-//            messageBox.appendText("Animating...\n");
             a.start();
         } else {
-//            messageBox.appendText("Animation stopped\n");
             a.stop();
         }
     }
@@ -281,6 +281,7 @@ public class Controller {
             public void handle(ActionEvent event) {
                 statsList = FXCollections.observableArrayList();
                 findCheckedItems((CheckBoxTreeItem<?>) treeView.getRoot(), statsList);
+                statsList.removeIf(s -> s.equals("Critter"));
                 stage.close(); // return to main window
             }
         });
@@ -299,5 +300,18 @@ public class Controller {
         for (TreeItem<?> child : item.getChildren()) {
             findCheckedItems((CheckBoxTreeItem<?>) child, checkedItems);
         }
+    }
+
+    public void instructionButton(ActionEvent event) {
+        String output =
+        "Select the type of critter to make with the drop down menu.\n"
+        + "Enter the number of critters to make (default is 1)\n"
+        + "Enter the number of steps or simulation speed.\n"
+        + "Enter the seed number for the random generator to use.\n"
+        + "Use toggle grid to turn on/off the grid lines.\n"
+        + "Press the stats button to select which critters to display stats for.\n"
+        + "Click and drag to resive the window and simulation grid";
+
+        messageBox.appendText(output);
     }
 }
