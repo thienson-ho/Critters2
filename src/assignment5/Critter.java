@@ -61,7 +61,20 @@ public abstract class Critter {
 		myPackage = Critter.class.getPackage().toString().split(" ")[1];
 	}
 	
-	protected final String look(int direction, boolean steps) {return "";}
+	protected final String look(int direction, boolean steps) {
+		int numSteps = !steps ? 1 : 2;
+		int[] newCoord = move(direction);
+		if(isOccupied(newCoord[0],newCoord[1])) {
+			for(Critter c: population) {
+				if(c.compareLocation(newCoord[0],newCoord[1])) {
+					return c.toString();
+				}
+			}
+		}
+
+		return null;
+
+	}
 	
 	/* rest is unchanged from Project 4 */
 	
